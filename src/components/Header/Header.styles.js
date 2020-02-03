@@ -2,10 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles(theme => ({
   headerBox: {
-    width: "100vw",
+    width: "100%",
     display: "flex",
     backgroundColor: "#bcaaa4",
-    padding: "5px",
     marginBottom: "8px"
   },
 

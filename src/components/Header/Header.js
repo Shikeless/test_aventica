@@ -6,7 +6,7 @@ function Header() {
   const classes = useStyles();
   return (
     <>
-      <Box className={classes.headerBox}>
+      <Box py={1} className={classes.headerBox}>
         <Box width="85%">
           <Typography variant="h4" className={classes.mainTitle}>
             React app for <b>Aventica</b>

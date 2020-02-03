@@ -1,15 +1,16 @@
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
-import { grey, lightGreen, red } from "@material-ui/core/colors";
+import { blueGrey, lightGreen, red } from "@material-ui/core/colors";
 
 export const useStyles = makeStyles(theme => ({
   draftSectionBox: {
-    border: "solid 2px black",
-    marginBottom: "8px"
+    border: "solid 1px grey",
+    borderRadius: "5px"
   },
   draftItem: {
     backgroundColor: "lightgrey",
-    padding: "10px"
+    padding: "10px",
+    borderRadius: "5px"
   },
 
   saveDraft: {
@@ -20,18 +21,18 @@ export const useStyles = makeStyles(theme => ({
 
 export const DraftButton = withStyles(theme => ({
   root: {
-    backgroundColor: grey[400],
+    backgroundColor: blueGrey[300],
     "&:hover": {
-      backgroundColor: grey[500]
+      backgroundColor: blueGrey[400]
     }
   }
 }))(Button);
 
 export const SaveButton = withStyles(theme => ({
   root: {
-    backgroundColor: lightGreen[400],
+    backgroundColor: lightGreen[300],
     "&:hover": {
-      backgroundColor: lightGreen[500]
+      backgroundColor: lightGreen[400]
     },
     marginLeft: "10px"
   }

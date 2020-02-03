@@ -11,7 +11,7 @@ function DraftSection() {
   const classes = useStyles();
   return (
     <>
-      <Box className={classes.draftSectionBox}>
+      <Box mb={1} className={classes.draftSectionBox}>
         <Box mx={3} my={3}>
           <TextField
             id="outlined-size-small"
@@ -31,7 +31,7 @@ function DraftSection() {
           <Typography variant="h5" gutterBottom>
             Draft
           </Typography>
-          <Box mb={4} className={classes.draftItem}>
+          <Box mb={4} boxShadow={2} className={classes.draftItem}>
             <Typography variant="body1">
               body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
@@ -45,20 +45,8 @@ function DraftSection() {
               </SaveButton>
             </Box>
           </Box>
-          <Box mb={4} className={classes.draftItem}>
+          <Box mb={4} boxShadow={2} className={classes.draftItem}>
             <Typography variant="body1">body1. Lorem ips.</Typography>
-            <Box display="flex" justifyContent="flex-end">
-              <RemoveButton variant="contained">Remove</RemoveButton>
-              <SaveButton variant="contained" className={classes.saveDraft}>
-                Save
-              </SaveButton>
-            </Box>
-          </Box>
-          <Box mb={4} className={classes.draftItem}>
-            <Typography variant="body1">
-              body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore
-            </Typography>
             <Box display="flex" justifyContent="flex-end">
               <RemoveButton variant="contained">Remove</RemoveButton>
               <SaveButton variant="contained" className={classes.saveDraft}>
