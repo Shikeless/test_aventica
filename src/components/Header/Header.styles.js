@@ -4,8 +4,9 @@ export const useStyles = makeStyles(theme => ({
   headerBox: {
     width: "100vw",
     display: "flex",
-    backgroundColor: "lightgrey",
-    padding: "5px"
+    backgroundColor: "#bcaaa4",
+    padding: "5px",
+    marginBottom: "8px"
   },
 
   mainTitle: {
