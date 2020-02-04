@@ -21,7 +21,7 @@ function MainSection(props) {
       <Grid container spacing={3}>
         {props.activeCards &&
           props.activeCards.map((item, index) => (
-            <Grid item lg={4} md={6} sm={12} key={index}>
+            <Grid item lg={4} md={6} sm={12} xs={12} key={index}>
               <ActiveCard item={item} id={index} />
             </Grid>
           ))}
