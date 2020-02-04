@@ -1,12 +1,11 @@
 import React from "react";
-import { Grid, Box, Divider } from "@material-ui/core";
-import { useStyles } from "./Main.styles.js";
+import { Grid } from "@material-ui/core";
+
 import Header from "../Header";
 import DraftSection from "../DraftSection";
 import MainSection from "../MainSection";
 
 function Main() {
-  const classes = useStyles();
   return (
     <>
       <Header />

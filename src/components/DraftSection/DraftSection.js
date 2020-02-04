@@ -1,42 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Box, TextField, Typography } from "@material-ui/core";
-import {
-  useStyles,
-  DraftButton,
-  SaveButton,
-  RemoveButton
-} from "./DraftSection.styles.js";
+import { useStyles, DraftButton, SaveButton } from "./DraftSection.styles.js";
 import { getDraftCards, addToDraft, addToActive } from "../../modules/App";
+import DraftCard from "../DraftCard";
 
 const MapStateToProps = state => ({
   draftCards: getDraftCards(state)
 });
 
 const MapDispatchToProps = { addToDraft, addToActive };
-
-function DraftItem(props) {
-  const classes = useStyles();
-
-  return (
-    <Box mb={4} boxShadow={2} className={classes.draftItem}>
-      <Typography variant="body1">{props.item.text}</Typography>
-      <Box display="flex" justifyContent="flex-end">
-        <RemoveButton
-          variant="contained"
-          onClick={() => {
-            console.log(props.item);
-          }}
-        >
-          Remove
-        </RemoveButton>
-        <SaveButton variant="contained" className={classes.saveDraft}>
-          Save
-        </SaveButton>
-      </Box>
-    </Box>
-  );
-}
 
 function DraftSection(props) {
   const classes = useStyles();
@@ -56,7 +29,7 @@ function DraftSection(props) {
     } else {
       card = { id: id, text: input, marked: false };
     }
-    action == "draft" ? props.addToDraft(card) : props.addToActive(card);
+    action === "draft" ? props.addToDraft(card) : props.addToActive(card);
     return setInput("");
   };
 
@@ -99,8 +72,8 @@ function DraftSection(props) {
             Draft
           </Typography>
           {props.draftCards &&
-            props.draftCards.map(item => (
-              <DraftItem key={item.id} item={item} />
+            props.draftCards.map((item, index) => (
+              <DraftCard key={index} item={item} id={index} />
             ))}
         </Box>
       </Box>

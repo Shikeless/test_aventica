@@ -13,6 +13,7 @@ export const useStyles = makeStyles(theme => ({
     position: "relative",
     marginLeft: "15%"
   },
+
   completeCounterIndicatorBox: {
     width: "15%",
     display: "flex",

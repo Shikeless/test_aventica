@@ -1,8 +1,16 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Typography, Box } from "@material-ui/core";
 import { useStyles } from "./Header.styles.js";
+import { getMarkedItems } from "../../modules/App";
 
-function Header() {
+const MapStateToProps = state => ({
+  markedItems: getMarkedItems(state)
+});
+
+const MapDispatchToProps = {};
+
+function Header(props) {
   const classes = useStyles();
   return (
     <>
@@ -13,11 +21,13 @@ function Header() {
           </Typography>
         </Box>
         <Box className={classes.completeCounterIndicatorBox}>
-          <Box className={classes.completeCounterIndicator}>0</Box>
+          <Box className={classes.completeCounterIndicator}>
+            &nbsp;{props.markedItems}&nbsp;
+          </Box>
         </Box>
       </Box>
     </>
   );
 }
 
-export default Header;
+export default connect(MapStateToProps, MapDispatchToProps)(Header);

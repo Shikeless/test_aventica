@@ -3,15 +3,10 @@ import { Button } from "@material-ui/core";
 import { blueGrey } from "@material-ui/core/colors";
 
 export const useStyles = makeStyles(theme => ({
-  mainSectionBox: {
-    border: "solid 1px grey",
-    backgroundColor: "lightblue",
-    minHeight: "100%"
-  },
-
   activeDraft: {
     backgroundColor: "lightgrey",
-    borderRadius: "5px"
+    borderRadius: "5px",
+    overflowWrap: "break-word"
   },
   completeIndicator: {
     width: "10px",
