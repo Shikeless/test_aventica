@@ -1,9 +1,18 @@
 import { handleActions } from "redux-actions";
 import { combineReducers } from "redux";
-import { setCount, setIsLoading, removeIsLoading } from "./actions";
+import { addToDraft, addToActive } from "./actions";
 
-const test = handleActions({}, true);
+const draftCards = handleActions(
+  { [addToDraft]: (_state, action) => [..._state, action.payload] },
+  []
+);
 
-export default combineReducers({ test });
+const activeCards = handleActions(
+  { [addToActive]: (_state, action) => [..._state, action.payload] },
+  []
+);
 
-export const getIsAuthorized = state => state.app.test;
+export default combineReducers({ draftCards, activeCards });
+
+export const getDraftCards = state => state.app.draftCards;
+export const getActiveCards = state => state.app.activeCards;

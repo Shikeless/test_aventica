@@ -1,3 +1,4 @@
 import { createAction } from "redux-actions";
 
-export const test = createAction("TEST");
+export const addToDraft = createAction("ADDTODRAFT");
+export const addToActive = createAction("ADDTOACTIVE");
