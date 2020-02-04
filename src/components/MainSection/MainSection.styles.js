@@ -16,7 +16,6 @@ export const useStyles = makeStyles(theme => ({
   completeIndicator: {
     width: "10px",
     height: "10px",
-    backgroundColor: "red",
     borderRadius: "3px"
   }
 }));
